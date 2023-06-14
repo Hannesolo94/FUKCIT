@@ -587,9 +587,10 @@ hr {
 /*! ---------------------------------------SECTION AND CONTAINERS---------------------------------------- !*/
 
 /* HEADING STYLES */
-
+h1,
 h2, 
-h2 > span {
+h2 > span,
+h1 > span {
     font-family: var(--H2);
     color: var(--H2C);
     font-size: 3rem;
