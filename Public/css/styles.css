@@ -1,0 +1,1001 @@
+
+
+/* FONT IMPORTS */
+
+@import url("https://use.typekit.net/ckg8ylh.css");
+@font-face {
+    font-family: canvas-script, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    src: url("https://use.typekit.net/ckg8ylh.css");
+}
+
+@import url("http://www.cufonfonts.com");
+@font-face {
+    font-family: 'Brush King Regular', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Brush King Regular'), url('Brush King.woff') format('woff');
+}
+
+/* Open Sans Regular */
+@font-face {
+    font-family: "open-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://use.typekit.net/ckg8ylh.css"); 
+}
+
+/* Open Sans Italic */
+@font-face {
+    font-family: "open-sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    src: url("https://use.typekit.net/ckg8ylh.css"); 
+}
+
+/* Open Sans Bold */
+@font-face {
+    font-family: "open-sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;    
+    src: url("https://use.typekit.net/ckg8ylh.css"); 
+}
+
+/* Open Sans Bold Italic */
+@font-face {
+    font-family: "open-sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;    
+    src: url("https://use.typekit.net/ckg8ylh.css"); 
+}
+
+/* Open Sans Condensed Light */
+@font-face {
+    font-family: "open-sans-condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;    
+    src: url("https://use.typekit.net/ckg8ylh.css"); 
+}
+
+/* Open Sans Condensed Light Italic */
+@font-face {
+    font-family: "open-sans-condensed", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    src: url("https://use.typekit.net/ckg8ylh.css"); 
+}
+
+/* Open Sans Condensed Bold */
+@font-face {
+    font-family: "open-sans-condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;    
+    src: url("https://use.typekit.net/ckg8ylh.css"); 
+}
+
+
+/* EVERYTHING ZEROED */
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* HTML SET UP */
+
+html {
+    background-color: black;
+    color: var(--MainC);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto;
+}
+
+
+/* ROOT STYLING */
+:root {
+    --MBC: #262626;
+    --MGC: #15E60E;
+    --MPC: #EA12D9;
+    --MPLC: #E108F8;
+    --MWC: #FFFFFF;
+    --H2: canvas-script, sans-serif;
+    --H2C: #FFFFFF;
+    --H3: 'Brush King Regular', sans-serif;
+    --osNormal: "open-sans", sans-serif;
+    --osCondensed: "open-sans-condensed", sans-serif;
+}
+
+
+/* BASE LINK STYLING */
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--MWC);
+    font-style: italic;
+}
+
+a:hover {
+    color: var(--MGC);
+    border-bottom: var(--MGC) solid 2px;
+    transition: 220ms;
+}
+
+i {
+    color: var(--MGC);
+    cursor: pointer;
+}
+
+i:hover {
+    color: var(--MPC);
+    font-size: larger;
+    border: var(--MPC) solid 1px;
+    padding: 5px;
+    border-radius: 100px;
+}
+
+
+
+
+
+/*! IMPORTANT DON'T FORGET !*/
+/* add so the i hides on phone screens */
+@media screen {
+    
+}
+
+
+
+div {
+    z-index: 0;
+}
+
+
+/* BASE BUTTON STYLING */
+button {
+    position: relative;
+    padding: 1em 1.8em;
+    outline: none;
+    border: 0.05px solid var(--MPC);
+    background: transparent;
+    color: var(--MPC);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    box-shadow: 0 0 10px var(--MPC), 0 0 25px var(--MBC), 0 0 50px var(--MPLC);
+    transition-delay: 0.6s;
+}
+
+button span {
+    position: absolute;
+}
+
+button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--MPC));
+}
+
+button:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+}
+
+button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--MGC));
+}
+
+button:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+}
+
+button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--MPC));
+}
+
+button:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+}
+
+button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--MGC));
+}
+
+button:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+}
+
+button:active {
+    background: var(--MPC);
+    background: linear-gradient(to top right, var(--MPC), var(--MGC));
+    color: #bfbfbf;
+    box-shadow: 0 0 8px var(--MPC), 0 0 8px var(--MGC), 0 0 8px var(--MPC);
+    transition: 0.1s;
+}
+
+button:active span:nth-child(1) 
+    span:nth-child(2) 
+    span:nth-child(2) 
+    span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+}
+
+/*! ---------------------------------------END OF BUTTON---------------------------------------- !*/
+
+
+/* BASE STYLING FOR SECTIONS AND CONTAINERS */
+
+
+/* nam container style */
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #484848;
+    padding: 10px;
+    margin-bottom: 80px;
+    border-radius: 100px;
+    box-shadow: #E108F8 0 3px 5px ;
+    z-index: 1;
+}
+
+/* nav button style */
+.nav-btn {
+    margin: 5px 10px;
+    pad: 10px 10px;
+}
+
+/*! ---------------------------------------- !*/
+/*! -------- Base Container Styling -------- !*/
+/*! ---------------------------------------- !*/
+
+header {
+    margin-top: 100px;
+    height: 100vh;
+}
+
+/* Section and container positioning */
+.section,
+.container {
+    display: flex;
+    margin: 150px 0;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* Footer positioning */
+footer,
+.footer-bottom-container,
+.location{
+    margin: 50px auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Main Button Container */
+.btn-container {
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+/* footer and card class positioning */
+.footer,
+.card  {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* paragraph sizing in location class */
+.location > p {
+    font-size: 0.5rem;
+}
+
+
+/* links and logo in footer spacing */
+.social-links,
+.footer-logo {
+    margin: 0;
+}
+
+/* footer logo sizing */
+.footer-logo {
+    width: 100px;
+}
+
+/* general article element spacing */
+article {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  article {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  article {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+}
+/* class cards container spacing */
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1500px;
+}
+
+/* class card container and card flex box */
+.card-container,
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* class card spacing and sizing */
+.card {
+    margin-top: 60px;
+    padding-top: 40px;
+    border: var(--MGC) solid 2px;
+    padding: 20px;
+    width: 400px;
+    max-width: 660px;
+    height: 400px;
+    max-height: 580px;
+    border-radius: 30px;
+}
+
+/* class card paragraph spacing */
+.card p {
+    margin: 40px;
+}
+
+/* class card img sizing */
+.card img {
+    width: 80px;
+}
+
+.card i  {
+    padding: 50px 20px 0 0;
+}
+
+/* column split class spacing */
+.column-split {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    margin-top: 80px;
+}
+
+/* column one spacing */
+.column-one {
+    margin-right: 30px;
+    padding-right: 30px;
+    border-right: var(--MPLC) solid 10px;
+}
+
+.quote-img {
+    float: left;
+    margin-right: 20px;
+    padding-bottom: 110px;
+}
+
+/* column two spacing */
+.column-two {
+    margin-left: 20px;
+}
+
+/* colum h2 text sizing */
+.column h2 {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+
+/* person  class container */
+.person {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-content: center;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.work {
+    object-fit: cover;
+    border: transparent;
+    padding-top: 150px 0;
+}
+
+.work img {
+    width: 180px;
+}
+
+.gif img {
+    padding-top: 80px;
+    width: 250px;
+}
+
+
+.addons,
+.three-column-split {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.addonDesc,
+.price-column {
+    padding-right: 30px;
+}
+
+.addons {
+    background-color: var(--MPC);
+    padding: 30px;
+}
+
+.addonPrices {
+    font-size: 4rem;
+}
+
+
+
+
+/*! ------------------------------------------------- */
+/*! ------------ Price Section Media Q -------------- */
+/*! ------------------------------------------------- */
+
+@media screen and (max-width: 600px) {
+  /* Addons Section */
+  .addons,
+  .three-column-split {
+    flex-direction: column;
+  }
+
+  .addonDesc,
+  .price-column {
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Addons Section */
+  .addons,
+  .three-column-split {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .addonDesc,
+  .price-column {
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  /* Addons Section */
+  .addons,
+  .three-column-split {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .addonDesc,
+  .price-column {
+    padding-right: 30px;
+  }
+}
+
+.addons {
+  background-color: var(--MPC);
+  padding: 30px;
+}
+
+.addonPrices {
+  font-size: 4rem;
+}
+
+
+
+
+/*! Divider Setup  */
+
+.divider-xs {
+    margin: 2px 0;
+}
+
+.divider-s {
+    margin: 20px 0;
+}
+
+.divider-m {
+    margin: 50px 0;
+}
+
+.divider-l{
+    margin: 100px 0;
+}
+
+hr {
+    border: var(--MGC) dotted 1px;
+    width: 500px;
+    align-items: center;
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+/*! ---------------------------------------SECTION AND CONTAINERS---------------------------------------- !*/
+
+/* HEADING STYLES */
+
+h2, 
+h2 > span {
+    font-family: var(--H2);
+    color: var(--H2C);
+    font-size: 3rem;
+}
+
+h3,
+h3 > span {
+    font-family: var(--H3);
+    color: var(--H2C);
+    font-size: 1.5rem;
+}
+
+p,
+li {
+    font-family: var(--osNormal);
+    color: var(--H2C);
+    font-size: 1rem;
+}
+
+li span span {
+    color: var(--MPC);
+}
+
+li:hover {
+    border: var(--MPC) solid 2px;
+    padding: 10px;
+    margin: 5px;
+}
+
+li:hover span {
+    color: var(--MGC);
+}
+
+ol {
+  border-top: 9px solid rgba(0,0,0,.13);
+  border-left: 0 none;
+  counter-reset: li;
+  list-style: none outside none;
+  margin: 0 auto;
+  padding-top: 2em;
+  padding-left: 0;
+  width: 75%;
+}
+
+li {
+    list-style: none;
+    border-bottom: var(--MGC) dotted 1.5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+h4 {
+    font-family: var(--H2);
+    color: var(--H2C);
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+h5 {
+    font-family: var(--H2);
+    color: var(--H2C);
+    font-size: 2rem;
+    text-align: center;
+}
+
+h6 {
+    font-family: var(--osNormal);
+    color: var(--H2C);
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  h2,
+  h2 > span {
+    font-size: 2.8rem;
+  }
+
+  h3,
+  h3 > span {
+    font-size: 1.2rem;
+  }
+
+  p,
+  li {
+    font-size: 0.9rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1.8rem;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2,
+  h2 > span {
+    font-size: 1.5rem;
+  }
+
+  h3,
+  h3 > span {
+    font-size: 1rem;
+  }
+
+  p,
+  li {
+    font-size: 0.8rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 0.7rem;
+  }
+}
+
+
+/*! ---------------------------------------HEADING & PARAGRAPH---------------------------------------- !*/
+
+/* BASE STYLING FOR HEADER SECTION */
+
+.header-logo {
+    width: 30%;
+}
+
+
+
+/* FAQ Accordion */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: transparent;
+  
+  color: var(--MWC);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: var(--MGC);
+  color: var(--MBC);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 30px;
+  background-color: transparent;
+  display: none;
+  overflow: hidden;
+  border-bottom: var(--MGC) solid 2px;
+}
+
+.accordion,
+.panel{
+    width: 800px;
+}
+
+div.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+div.accordion.active:after {
+    content: "\2212";
+}
+
+@media only screen and (max-width: 600px) {
+  .faq-container {
+    padding: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+/* FAQ Accordion */
+    .accordion,
+    .panel {
+        width: 100%;
+    }    
+    .panel {
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+/* FAQ Accordion */
+    .accordion,
+    .panel {
+        width: 90%;
+    }
+
+    .panel {
+        padding: 25px;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+/* FAQ Accordion */
+    .accordion,
+    .panel {
+        width: 800px;
+    }
+    .panel {
+        padding: 30px;
+    }
+}
+
+
+/* Media queries for responsive screens */
+
+/* Small screens */
+@media screen and (max-width: 600px) {
+    /* Header */
+    header {
+        margin-top: 50px;
+        height: 80vh;
+    }
+
+    /* Section and container positioning */
+    .section,
+    .container {
+        margin: 80px 0;
+    }
+
+    /* Footer positioning */
+    footer,
+    .footer-bottom-container,
+    .location{
+        margin: 30px auto;
+    }
+
+    /* Main Button Container */
+    .btn-container {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    /* Class cards container spacing */
+    .cards-container {
+        margin: 20px 0;
+    }
+
+    /* Class card spacing and sizing */
+    .card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    /* Column split class spacing */
+    .column-split {
+        margin-top: 40px;
+    }
+
+    /* Column one spacing */
+    .column-one {
+        margin-left: 20px;
+        padding-left: 20px;
+    }   
+
+    /* Column two spacing */
+    .column-two {
+        margin-left: 20px;
+        padding-left: 20px;
+    }
+
+    
+}
+
+/* Medium screens */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Header */
+    header {
+        margin-top: 80px;
+        height: 90vh;
+    }
+
+    /* Section and container positioning */
+    .section,
+    .container {
+        margin: 120px 0;
+    }
+
+    /* Footer positioning */
+    footer,
+    .footer-bottom-container,
+    .location{
+        margin: 40px auto;
+    }
+
+    /* Main Button Container */
+    .btn-container {
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+
+    /* Class cards container spacing */
+    .cards-container {
+        margin: 30px 0;
+    }
+
+    /* Class card spacing and sizing */
+    .card {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    /* Column split class spacing */
+    .column-split {
+        margin-top: 60px;
+    }
+
+    .column-one {
+        margin-left: 20px;
+        padding-left: 20px;
+        
+    }
+
+    /* Column two spacing */
+    .column-two {
+        margin-left: 20px;
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 1025px) {
+    /* Header */
+    header {
+        margin-top: 100px;
+        height: 100vh;
+    }
+
+    /* Section and container positioning */
+    .section,
+    .container {
+        margin: 150px 0;
+    }
+
+    /* Footer positioning */
+    footer,
+    .footer-bottom-container,
+    .location{
+        margin: 50px auto;
+    }
+
+    /* Main Button Container */
+    .btn-container {
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    /* Class cards container spacing */
+    .cards-container {
+        margin: 40px 0;
+    }
+
+    /* Class card spacing and sizing */
+    .card {
+        width: 400px;
+        max-width: 660px;
+        height: 400px;
+        max-height: 580px;
+    }
+
+    /* Column split class spacing */
+    .column-split {
+        margin-top: 80px;
+    }
+
+    .column-one {
+        margin-left: 20px;
+        padding-left: 20px;
+        
+    }
+
+    /* Column two spacing */
+    .column-two {
+        margin-left: 20px;
+        padding-left: 20px;
+    }
+}
