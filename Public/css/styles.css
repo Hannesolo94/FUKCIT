@@ -279,6 +279,31 @@ button:active span:nth-child(1)
     pad: 10px 10px;
 }
 
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: row;
+        bottom: auto;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 40px;
+    }
+}
+
+/* Media query for screens with a maximum width of 576px */
+@media (max-width: 576px) {
+    .nav-btn {
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .nav-container {
+        margin-bottom: 40px;
+        transform: translateX(-55%);
+    }
+}
 /*! ---------------------------------------- !*/
 /*! -------- Base Container Styling -------- !*/
 /*! ---------------------------------------- !*/
